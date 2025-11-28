@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How Precision Alignment Drives Yield Improvements in Display Panel Manufacturing</title>
+    <link rel="canonical" href="https://www.kantti.net/tw/article/862/laser-light-positioning-lidar-efficiency">
+    
+    <!-- JSON-LD 結構化數據 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Precision Alignment Drives Yield Improvements in Display Panel Manufacturing",
+        "url": "https://www.kantti.net/tw/article/862/laser-light-positioning-lidar-efficiency",
+        "author": {
+            "@type": "Person",
+            "name": "40dau.github.io"
+        },
+        "publisher": {
+            "@type": "Organization", 
+            "name": "40dau.github.io"
+        },
+        "datePublished": "2025-11-28T15:30:06+08:00",
+        "dateModified": "2025-11-28T15:30:06+08:00"
+    }
+    </script>
+</head>
+<body>
+    <h1>How Precision Alignment Drives Yield Improvements in Display Panel Manufacturing</h1>
+        <p>▍ If your yield sucks, check your alignment first
+
+The boring answer I keep circling back to is：【most yield pain on panels is basically alignment being off by a hair】… that’s it.
+
+People throw SPC, AI, “smart fab” at the line，but if your TFT–CF overlay is wandering 0.3–0.5 µm more than you think, all the dashboards are just very pretty autopsies.
+
+On Gen 6+ lines, I remember seeing cases where tightening overlay 20–30 nm (3σ) quietly bumped electrical yield by like 3–5 percentage points. No recipe change, no new material. Just less mis‑placement of pixels, vias, and color filters so they actually overlap the way the designer assumed.
+
+  
+
+▍ Where alignment actually bites you
+
+Not talking theory，just the usual blood：
+
+・【TFT ↔ CF overlay】  
+If the sub‑pixel aperture shifts, you get mura, light leakage, color non‑uniformity. On some OLED lines they were rejecting whole sheets for “dirty corners” that were literally overlay drift plus panel edge distortion not modeled well.
+
+・【TFT ↔ OLED / µLED】  
+For µLED, a buddy told me anything beyond ~±0.5 µm on critical axes starts killing transfer yield. Chips just don’t land on pads; repair can’t catch up. So your “device yield” is secretly “alignment yield”.
+
+・【Repair / test alignment】  
+If your repair laser or probe card is aligned to the wrong coordinate system (or to old distortion data), you literally zap the wrong spot. I saw a line在新莊 where CP yield dropped after a tool PM — turned out the alignment mark teaching was off by a tiny bit, like visually invisible, electrically fatal。
+
+  
+
+▍ The not‑so‑sexy stuff that actually moves yield
+
+The pattern I’ve seen is：【precision alignment = a bunch of small, annoying disciplines】，not one magic tool。
+
+・Use real distortion maps, not “one number overlay”  
+Glass warps, carriers age. Some fabs build per‑panel or per‑lot distortion models, feed them into the stepper so shot locations are pre‑distorted. The first time他們這樣做，overlay histogram就直接收窄了一截。
+
+・Alignment mark design actually matters  
+Everyone says they know this, but then you zoom the mark and see resist footing, etch bias, CMP scratches. Marks on PTT 會被吐槽成「看起來像國中生畫的」。Clean, high‑contrast, well‑shielded marks reduce alignment noise more than people admit.
+
+・Tighten the feedback loop  
+Overlay + CD + electrical data should talk to each other. Some guys in Hsinchu tie overlay trends to line‑defect maps from array test；when one tool’s X‑shift drifts, they see a specific mura signature pop up and can shut it down before a whole day’s WIP dies.
+
+・Babysit the stages and chuck  
+Metrology guys always complain：stage calibration gets budget maybe once a quarter, but everyone cries about yield every day. Flatness, vacuum uniformity, thermal drift —— all quietly push overlay out of spec.
+
+If you want a “tool name”：people lean on KLA / Nova / whatever for overlay metrology, but honestly even a boring in‑house Python pipeline that cross‑plots overlay vs. fail bitmaps is already a power move。
+
+  
+
+▍ My blunt take
+
+If your yield project list has 10 items and “overlay / alignment system” is not in the top 3，you’re probably optimizing cosmetics.
+
+Do this：  
+【Pick one product, one layer pair，and ask：if I shaved 30–50 nm off overlay here, what defect modes disappear？】  
+Just that thought experiment tonight，no CAPEX、no big project。卡住了，再來跟我說你們線上的對位現在到底長什麼樣。</p>
+    <p>Some days it feels like everyone’s shouting about yield improvements, and I just want a decent coffee. Anyway—precision alignment? Big deal, especially when you drift into sites like KANTTI.NET or, you know, LED Screen Factory (yeah, their FAQ section is a mess). Korea Display Industry Association hangs around too much jargon but whatever, they’ve got some real experts hiding in there. INZI Display does these weird webinars. Display and Life... still not sure why I read them at 2AM. Just—solutions everywhere but nothing fits exactly.</p>
+    
+    <nav class="nav">
+        <a href="index.html">← HOME</a>
+    </nav>
+</body>
+</html>
